@@ -17,6 +17,7 @@ svg.wish-happy-logo {
     // top: 50%;
     // left: 50%;
     // @include transform(translate3d(-50%,-50%,0));
+    @include transform(scale(1.15));
 }
 
 .moveSecondPlane {
@@ -32,28 +33,30 @@ svg.wish-happy-logo {
     }
 }
 
+$stepFirstPlane: 25px;
+
 .moveFirstPlane {
     @include animation(moveFirstPlane 4s linear infinite);
 }
 
 @include keyframes(moveFirstPlane) {
     0% {
-        @include transform(translate3d(0,-50px,0));
-    }
-    20% {
         @include transform(translate3d(0,0,0));
     }
+    20% {
+        @include transform(translate3d(0,$stepFirstPlane/2,0));
+    }
     40% {
-        @include transform(translate3d(-50px,-50px,0));
+        @include transform(translate3d(-$stepFirstPlane,0,0));
     }
     60% {
-        @include transform(translate3d(0,-100px,0));
+        @include transform(translate3d(0,-$stepFirstPlane/2,0));
     }
     80% {
-        @include transform(translate3d(50px,0,0));
+        @include transform(translate3d($stepFirstPlane,$stepFirstPlane/2,0));
     }
     100% {
-        @include transform(translate3d(0,-50px,0));
+        @include transform(translate3d(0,0,0));
     }
 }
 
@@ -62,66 +65,65 @@ svg.wish-happy-logo {
 
 
 .iphone {
-  height: 565px;
-  background: white;
-  border: 5px solid #ccc;
-  border-radius: 30px;
-  width: 250px;
-  margin: 100px auto;
+    height: 565px;
+    background: white;
+    border: 5px solid #ccc;
+    border-radius: 30px;
+    width: 250px;
+    margin: 100px auto;
 }
 
 .camera {
-  background: black;
-  width: 10px;
-  height: 10px;
-  border-radius: 50px;
-  margin: 0 auto;
-  margin-top: 20px;
+    background: black;
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 .buraco {
-  background: black;
-  width: 5px;
-  height: 5px;
-  border-radius: 50px;
-  margin-top: 20px;
-  float: left;
-  margin-left: 80px;
+    background: black;
+    width: 5px;
+    height: 5px;
+    border-radius: 50px;
+    margin-top: 20px;
+    float: left;
+    margin-left: 80px;
 }
 
 .traco {
-  background: black;
-  height: 5px;
-  width: 50px;
-  border-radius: 10px;
-  float: left;
-  margin: 20px 0 0 15px;
+    background: black;
+    height: 5px;
+    width: 50px;
+    border-radius: 10px;
+    float: left;
+    margin: 20px 0 0 15px;
 }
 
 .screen {
-  // background: url('http://forums.imore.com/attachments/iphone-5s/38471d1379827095t-show-us-your-iphone-5s-homescreen-imageuploadedbyimore-forums1379827091.693530.jpg') 0% 0% no-repeat;
-  width: 93%;
-  height: 410px;
+    width: 93%;
+    height: 410px;
     border: 3px solid;
-
-  float: left;
-  background-size: cover;
-  margin: 20px 0 0 6px;
+    float: left;
+    background-size: cover;
+    margin: 20px 0 0 6px;
+    overflow: hidden;
 }
 
 .btn {
-  float: left;
-  border: 3px solid #ccc;
-  width: 40px;
-  margin: 20px 0 0 100px;
-  height: 40px;
-  border-radius: 50px;
+    float: left;
+    border: 3px solid #ccc;
+    width: 40px;
+    margin: 20px 0 0 100px;
+    height: 40px;
+    border-radius: 50px;
 }
 
 .btn2 {
-  border: 2px solid #777;
-  height: 10px;
-  width: 10px;
-  margin: 13px;
-  border-radius: 4px;
+    border: 2px solid #777;
+    height: 10px;
+    width: 10px;
+    margin: 13px;
+    border-radius: 4px;
 }
