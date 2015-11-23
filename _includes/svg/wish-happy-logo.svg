@@ -76,10 +76,10 @@
         </g>
         <g class="moveFirstPlane">
             <g transform="translate(33 31)">
-                <mask id="c" fill="#fff">
+                <!-- <mask id="c" fill="#fff">
                     <use xlink:href="#a"/>
                 </mask>
-                <use fill="none" filter="url(#b)" xlink:href="#a"/>
+                <use fill="none" filter="url(#b)" xlink:href="#a"/> -->
                 <circle cx="672" cy="184" r="841" fill="#F7A51F" mask="url(#c)"/>
                 <circle cx="562" cy="164" r="771" fill="#FFAC23" mask="url(#c)"/>
             </g>
